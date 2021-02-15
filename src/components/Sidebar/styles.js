@@ -41,7 +41,8 @@ export const Following = styled.div`
   border-top: 0.5px solid rgba(22, 24, 35, 0.12);
   border-bottom: 0.5px solid rgba(22, 24, 35, 0.12);
 `;
-export const FollwingHeader = styled.div`
+
+export const FollowingHeader = styled.div`
   font-weight: 400px;
   font-size: 16px;
   line-height: 22px;
@@ -50,6 +51,7 @@ export const FollwingHeader = styled.div`
   padding-left: 16px;
   margin-bottom: 28px;
 `;
+
 export const InfoContainer = styled.div`
   margin-top: 16px;
   padding-left: 16px;
@@ -58,6 +60,7 @@ export const InfoContainer = styled.div`
   box-sizing: border-box;
   color: rgba(22, 24, 35, 0.5);
 `;
+
 export const Links = styled.div`
   margin-bottom: ${(props) => (props.margin ? '8px' : '0px')};
 

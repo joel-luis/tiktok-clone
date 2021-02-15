@@ -24,6 +24,7 @@
     "rules": {
         "prettier/prettier": "error",
         "react/prop-types": "off",
+        "react/no-array-index-key": "off",
         "react/self-closing-comp": "off",
         "jsx-a11y/anchor-is-valid": "off",
         "jsx-a11y/anchor-has-content": "off",

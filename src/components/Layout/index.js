@@ -1,11 +1,9 @@
 import React from "react";
 
-import {
-  Header,
-  Container,
-  SidebarContainer,
-  ContentContainer,
-} from "./styles";
+import Header from "../Header";
+import Sidebar from "../Sidebar";
+
+import { Container, SidebarContainer, ContentContainer } from "./styles";
 
 function Layout({ children }) {
   return (
@@ -13,7 +11,7 @@ function Layout({ children }) {
       <Header />
       <Container>
         <SidebarContainer>
-          <Siderbar />
+          <Sidebar />
         </SidebarContainer>
 
         <ContentContainer>{children}</ContentContainer>

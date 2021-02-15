@@ -1,0 +1,29 @@
+import styled from 'styled-components';
+
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 45px;
+  padding: 0 16px;
+`;
+
+export const Avatar = styled.div`
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin-right: 12px;
+`;
+
+export const Info = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  > a {
+    font-weight: 600;
+    font-size: 17px;
+    :hover {
+      text-decoration: underline;
+    }
+  }
+`;

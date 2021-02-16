@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState } from 'react';
 
 import Button from '../Button';
 import {
@@ -22,6 +22,18 @@ import {
 } from './styles';
 
 function PostCard({ post }) {
+  const videoRef = useRef();
+  const [running, setRunning] = useState(false);
+
+  const toggleAction = () => {
+    if (videoRef?.current != null) {
+      if (!running) videoRef.current.play();
+      else videoRef.current.pause();
+
+      setRunning(!running);
+    }
+  };
+
   return (
     <Container>
       <Header>
@@ -53,14 +65,17 @@ function PostCard({ post }) {
         </Song>
         <VideoContainer>
           <Video
+            ref={videoRef}
             src={post?.videourl}
             webkit-playsinline="true"
             playsinline=""
             loop="true"
             preload="metadata"
           ></Video>
-          <ActionsContainer>
-            <PlayerIcon src="/images/playIcon.svg"></PlayerIcon>
+          <ActionsContainer onClick={toggleAction}>
+            <PlayerIcon
+              src={running ? '/images/pauseIcon.svg' : '/images/playIcon.svg'}
+            ></PlayerIcon>
           </ActionsContainer>
         </VideoContainer>
       </Content>

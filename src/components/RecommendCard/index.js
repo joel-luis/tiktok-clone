@@ -1,9 +1,13 @@
-import React from 'react';
+import { Container, Avatar, Info } from './styles';
 
-// import { Container } from './styles';
-
-function RecommendCard() {
-  return <div />;
+export default function RecommendCard({ recommend }) {
+  return (
+    <Container>
+      <Avatar src={recommend.avatar}></Avatar>
+      <Info>
+        <a>{recommend.title}</a>
+        <span>{recommend.views}</span>
+      </Info>
+    </Container>
+  );
 }
-
-export default RecommendCard;
